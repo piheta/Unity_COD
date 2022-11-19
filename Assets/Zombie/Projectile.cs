@@ -1,0 +1,43 @@
+﻿using System;
+using UnityEngine;
+using System.Collections;
+using Random = UnityEngine.Random;
+
+public class Projectile : MonoBehaviour {
+
+	[Range(5, 100)]
+	public float minDestroyTime;
+	public float maxDestroyTime;
+
+
+	[Header("Impact Effect Prefabs")]
+	public Transform [] metalImpactPrefabs;
+
+	private int damage = 10;
+
+	private void Start ()
+	{
+		
+	}
+
+	//If the bullet collides with anything
+	private void OnCollisionEnter(Collision collision)
+	{
+		//Ignore collisions with other projectiles.
+		if (collision.gameObject.GetComponent<Projectile>() != null)
+			return;
+
+
+		//If bullet collides with "Metal" tag
+		if (collision.transform.tag == "Metal") 
+		{
+			collision.collider.GetComponent<EnemyHealth>().dealDamage(damage);
+			//Instantiate random impact prefab from array
+			Instantiate (metalImpactPrefabs [Random.Range 
+				(0, metalImpactPrefabs.Length)], transform.position, 
+				Quaternion.LookRotation (collision.contacts [0].normal));
+			//Destroy bullet object
+			Destroy(gameObject);
+		}
+	}
+}
