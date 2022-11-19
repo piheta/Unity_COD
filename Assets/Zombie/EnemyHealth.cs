@@ -16,7 +16,9 @@ public class EnemyHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            
             animator.SetBool("dead", true);
+            money.player_money += 100;
             gameObject.GetComponent<NavMeshAgent>().enabled = false;
             gameObject.GetComponent<CapsuleCollider>().enabled = false;
             Destroy(gameObject, 5);

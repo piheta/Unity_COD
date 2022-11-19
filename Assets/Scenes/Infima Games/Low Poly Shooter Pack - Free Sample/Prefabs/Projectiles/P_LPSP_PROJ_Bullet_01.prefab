@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 54704279786675872}
   - component: {fileID: 65871565580582628}
   - component: {fileID: 96448838451407516}
+  - component: {fileID: 1626902195412041469}
   m_Layer: 15
   m_Name: P_LPSP_PROJ_Bullet_01
   m_TagString: Untagged
@@ -174,6 +175,22 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &1626902195412041469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086664671600574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3858d15127f6a44c993a4b8015ab6f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyTime: 5
+  maxDestroyTime: 0.1
+  metalImpactPrefabs:
+  - {fileID: 4587651611338842, guid: 5e02303289b3c494e8e185be0fbbd405, type: 3}
 --- !u!1 &1231345400216816
 GameObject:
   m_ObjectHideFlags: 0

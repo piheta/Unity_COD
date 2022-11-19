@@ -37,7 +37,7 @@ public class Projectile : MonoBehaviour {
 				(0, metalImpactPrefabs.Length)], transform.position, 
 				Quaternion.LookRotation (collision.contacts [0].normal));
 			//Destroy bullet object
-			Destroy(gameObject);
+			Destroy(gameObject, 1);
 		}
 	}
 }
