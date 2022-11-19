@@ -9,6 +9,8 @@ public class Projectile : MonoBehaviour {
 	public float minDestroyTime;
 	public float maxDestroyTime;
 
+	public bool destroyOnImpact = false;
+
 
 	[Header("Impact Effect Prefabs")]
 	public Transform [] metalImpactPrefabs;
@@ -28,16 +30,40 @@ public class Projectile : MonoBehaviour {
 			return;
 
 
+		//If destroy on impact is false, start 
+		//coroutine with random destroy timer
+		if (!destroyOnImpact)
+		{
+			StartCoroutine(DestroyTimer());
+		}
+		//Otherwise, destroy bullet on impact
+		else
+		{
+			Destroy(gameObject);
+		}
+
+
 		//If bullet collides with "Metal" tag
 		if (collision.transform.tag == "Metal") 
 		{
 			collision.collider.GetComponent<EnemyHealth>().dealDamage(damage);
+
 			//Instantiate random impact prefab from array
 			Instantiate (metalImpactPrefabs [Random.Range 
 				(0, metalImpactPrefabs.Length)], transform.position, 
 				Quaternion.LookRotation (collision.contacts [0].normal));
 			//Destroy bullet object
-			Destroy(gameObject, 1);
+			Destroy(gameObject);
 		}
 	}
+
+	private IEnumerator DestroyTimer()
+	{
+		//Wait random time based on min and max values
+		yield return new WaitForSeconds
+			(Random.Range(minDestroyTime, maxDestroyTime));
+		//Destroy bullet object
+		Destroy(gameObject);
+	}
+
 }

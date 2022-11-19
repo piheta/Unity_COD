@@ -1796,7 +1796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2748913124992463393, guid: 19eadcf8fbed56b4da77ca94c1b4145f, type: 3}
   aiState: 0
-  distanceTreshold: 10
+  distanceTreshold: 10000
   attackThreshold: 1
   animator: {fileID: 7389507112651452681}
 --- !u!114 &1736766714266474694
