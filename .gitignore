@@ -11,6 +11,8 @@
 /[Uu]ser[Ss]ettings/
 /[Pp]rojectSettings/
 /[Pp]ackages/
+Assets/ui_shop.meta
+Assets/ui_shop/*.meta
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
