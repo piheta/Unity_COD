@@ -91,64 +91,8 @@ public class GameManager : MonoBehaviour
         {
             score = PlayerPrefs.GetInt("score");
         }
-        InitilizeGamePlayerPrefs();
     }
 
-    /// <summary>
-    /// Description:
-    /// Sets up the game player prefs of the player's health and lives
-    /// Input:
-    /// none
-    /// Return:
-    /// void (no return)
-    /// </summary>
-    private void InitilizeGamePlayerPrefs()
-    {
-        if (player != null)
-        {
-            Health playerHealth = player.GetComponent<Health>();
-
-            // Set lives accordingly
-            if (PlayerPrefs.GetInt("lives") == 0 || resetPlayerPrefsSettings)
-            {
-                PlayerPrefs.SetInt("lives", playerHealth.currentLives);
-            }
-
-            playerHealth.currentLives = PlayerPrefs.GetInt("lives");
-
-            // Set health accordingly
-            if (PlayerPrefs.GetInt("health") == 0 || resetPlayerPrefsSettings)
-            {
-                PlayerPrefs.SetInt("health", playerHealth.currentHealth);
-            }
-
-            playerHealth.currentHealth = PlayerPrefs.GetInt("health");
-
-            if (resetPlayerPrefsSettings)
-            {
-                PlayerPrefs.SetInt("score", 0);
-            }
-        }
-        KeyRing.ClearKeyRing();
-    }
-
-    /// <summary>
-    /// Description:
-    /// Sets the lives and health of the player prefs to the player's lives and health
-    /// Input:
-    /// none
-    /// Return:
-    /// void (no return)
-    /// </summary>
-    private void SetGamePlayerPrefs()
-    {
-        if (player != null)
-        {
-            Health playerHealth = player.GetComponent<Health>();
-            PlayerPrefs.SetInt("lives", playerHealth.currentLives);
-            PlayerPrefs.SetInt("health", playerHealth.currentHealth);
-        }
-    }
 
     /// <summary>
     /// Description:
@@ -191,7 +135,6 @@ public class GameManager : MonoBehaviour
     public void LevelCleared()
     {
         PlayerPrefs.SetInt("score", score);
-        SetGamePlayerPrefs();
         if (uiManager != null)
         {
             // pause the game without brining up the pause screen
