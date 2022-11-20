@@ -5,6 +5,7 @@ using UnityEngine;
 public class money : MonoBehaviour
 {
     public static int player_money = 1000;
+    public static int easter_eggs = 0;
     public GameObject poorLabel;
 
 
@@ -16,6 +17,6 @@ public class money : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        Debug.Log(player_money);
+        Debug.Log("money: " + player_money + " eggs: " + easter_eggs);
     }
 }
