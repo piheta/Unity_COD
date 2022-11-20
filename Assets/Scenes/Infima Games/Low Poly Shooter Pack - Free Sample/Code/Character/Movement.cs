@@ -135,7 +135,7 @@ namespace InfimaGames.LowPolyShooterPack
         {
             //Move.
             MoveCharacter();
-            
+
             //Unground.
             grounded = false;
         }
@@ -178,7 +178,7 @@ namespace InfimaGames.LowPolyShooterPack
             #endregion
             
             //Update Velocity.
-            Velocity = new Vector3(movement.x, 0.0f, movement.z);
+            Velocity = new Vector3(movement.x, rigidBody.velocity.y - 0.1f, movement.z);
         }
 
         /// <summary>
