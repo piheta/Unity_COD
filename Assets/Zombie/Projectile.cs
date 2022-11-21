@@ -15,7 +15,7 @@ public class Projectile : MonoBehaviour {
 	[Header("Impact Effect Prefabs")]
 	public Transform [] metalImpactPrefabs;
 
-	private int damage = 10;
+	private float damage = 30f;
 
 	private void Start ()
 	{
@@ -46,7 +46,7 @@ public class Projectile : MonoBehaviour {
 		//If bullet collides with "Metal" tag
 		if (collision.transform.tag == "Metal") 
 		{
-			collision.collider.GetComponent<EnemyHealth>().dealDamage(damage);
+			collision.collider.GetComponent<EnemyManager>().Hit(damage);
 
 			//Instantiate random impact prefab from array
 			Instantiate (metalImpactPrefabs [Random.Range 
