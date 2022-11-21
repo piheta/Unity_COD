@@ -45,6 +45,6 @@ public class PlayerManager : MonoBehaviour {
     }
 
     public void CameraShake() {
-        playerCamera.transform.localRotation = Quaternion.Euler(Random.Range(-2, 2), 0, 0);
+        playerCamera.transform.localRotation = Quaternion.Euler(Random.Range(-10, 10), 0, 0);
     }
 }
