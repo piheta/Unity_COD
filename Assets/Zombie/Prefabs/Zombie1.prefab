@@ -1721,8 +1721,7 @@ GameObject:
   m_Component:
   - component: {fileID: 578376449398627443}
   - component: {fileID: 7389507112651452681}
-  - component: {fileID: 7435795133674940930}
-  - component: {fileID: 1736766714266474694}
+  - component: {fileID: 2433144827134922424}
   - component: {fileID: 516688830}
   - component: {fileID: 516688826}
   m_Layer: 0
@@ -1782,7 +1781,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7435795133674940930
+--- !u!114 &2433144827134922424
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1791,28 +1790,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 4493914613880827488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 978b4be5351415c4d90ad989c6afd7bc, type: 3}
+  m_Script: {fileID: 11500000, guid: b731aa458e8795b42b748bb5f719c5c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 2748913124992463393, guid: 19eadcf8fbed56b4da77ca94c1b4145f, type: 3}
+  enemyAnimator: {fileID: 7389507112651452681}
+  damage: 20
+  health: 100
+  gameManager: {fileID: 0}
+  target: {fileID: 7646167350421451695, guid: a407aa65caf2efe08bbc33d10159b65b, type: 3}
   aiState: 0
   distanceTreshold: 10000
-  attackThreshold: 1
-  animator: {fileID: 7389507112651452681}
---- !u!114 &1736766714266474694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4493914613880827488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 225a876a2897cb844ba8770bee2b9eda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 100
-  animator: {fileID: 7389507112651452681}
+  attackThreshold: 0.5
+  audioSource: {fileID: 0}
+  zombieSounds:
+  - {fileID: 8300000, guid: 4c285a791c630e7478685ebcf5a3cc19, type: 3}
+  - {fileID: 8300000, guid: 110d2c2db57f0794e8521485d7c53f36, type: 3}
+  - {fileID: 8300000, guid: 119480eacbb7d944f9af8d37bb87a35e, type: 3}
 --- !u!136 &516688830
 CapsuleCollider:
   m_ObjectHideFlags: 0
