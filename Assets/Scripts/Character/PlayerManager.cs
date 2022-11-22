@@ -22,6 +22,14 @@ public class PlayerManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if (money.easter_eggs == 8){
+            shakeTime = 0;
+            shakeDuration = 2.0f;
+            hurtPanel.alpha = 0f;
+            money.easter_eggs = 0;
+            CameraShake();
+        }
+
         if(hurtPanel.alpha > 0) {
             hurtPanel.alpha -= Time.deltaTime;
         }
