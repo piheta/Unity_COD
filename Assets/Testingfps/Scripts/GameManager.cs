@@ -34,10 +34,13 @@ public class GameManager : MonoBehaviour {
             roundNum.text = "Round: " + round.ToString();
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            Pause();
-
+        if (!endScreen.activeSelf) {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Pause();
+            }
         }
+        
     }
 
     public void NextWave(int round) {
