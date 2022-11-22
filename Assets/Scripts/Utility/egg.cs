@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class egg : MonoBehaviour
 {
-    public GameObject player;
-    float Distance1;
-    public GameObject obj1;
     public AudioSource audioSource;
 
     public void hitEgg(){
