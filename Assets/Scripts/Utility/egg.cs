@@ -9,6 +9,11 @@ public class egg : MonoBehaviour
     public GameObject obj1;
     public AudioSource audioSource;
 
+    public void hitEgg(){
+        Destroy(gameObject);
+        money.easter_eggs += 1;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +23,8 @@ public class egg : MonoBehaviour
     // Update is called once per frame
     void Update(){
         Distance1 = Vector3.Distance(obj1.transform.position, player.transform.position);
+
+
 
         if (Distance1 < 1.5f){
             money.easter_eggs += 1;
