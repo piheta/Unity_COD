@@ -15,24 +15,35 @@ public class GameManager : MonoBehaviour {
 
     public GameObject pauseMenu;
 
+    
+
     public TextMeshProUGUI roundNum;
     public TextMeshProUGUI roundsSurvived;
     public GameObject endScreen;
 
     public Animator blackScreenAnimator;
 
+
+ 
+
     // Start is called before the first frame update
     void Start() {
     }
 
+
+    
+
     // Update is called once per frame
     void Update() {
         //healthNum.text = "Health " + player.health.ToString();
-        if (enemiesAlive == 0) {
-            round++;
-            NextWave(round);
-            roundNum.text = "Round: " + round.ToString();
+        if (enemiesAlive == 0)
+        {
+                round++;
+                NextWave(round);
+                roundNum.text = "Round: " + round.ToString();
         }
+ 
+
 
         if (!endScreen.activeSelf) {
             if (Input.GetKeyDown(KeyCode.Escape))
@@ -45,11 +56,13 @@ public class GameManager : MonoBehaviour {
 
     public void NextWave(int round) {
         for (int i = 0; i < round; i++) {
+            
             GameObject spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
 
             GameObject enemySpawned = Instantiate(enemyPrefab, spawnPoint.transform.position, Quaternion.identity);
             enemySpawned.GetComponent<EnemyManager>().gameManager = GetComponent<GameManager>();
             enemiesAlive++;
+
         }
     }
 
