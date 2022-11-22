@@ -12,6 +12,7 @@ public class egg : MonoBehaviour
     public void hitEgg(){
         Destroy(gameObject);
         money.easter_eggs += 1;
+        audioSource.Play();
     }
 
     // Start is called before the first frame update
