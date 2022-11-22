@@ -8,6 +8,7 @@ public class barricade_remove : MonoBehaviour
     float Distance1;
     public GameObject obj1;
     public GameObject label;
+        public AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class barricade_remove : MonoBehaviour
                 obj1.SetActive(false);
                 label.SetActive(false);
                 money.player_money -= 500;
+                audioSource.Play();
             }
 
         } 
