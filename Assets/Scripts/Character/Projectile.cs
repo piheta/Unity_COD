@@ -42,6 +42,11 @@ public class Projectile : MonoBehaviour {
 			Destroy(gameObject);
 		}
 
+		if (collision.transform.tag == "Egg") {
+			
+			collision.collider.GetComponent<egg>().hitEgg();
+			Destroy(gameObject);
+		}
 
 		//If bullet collides with "Metal" tag
 		if (collision.transform.tag == "Metal") 

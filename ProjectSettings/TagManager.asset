@@ -17,6 +17,7 @@ TagManager:
   - Dirt (Static)
   - Wood
   - RoundNumber
+  - Egg
   layers:
   - Default
   - TransparentFX
