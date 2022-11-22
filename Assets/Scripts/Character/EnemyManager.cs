@@ -34,6 +34,16 @@ public class EnemyManager : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
+    void Update() 
+    {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.clip = zombieSounds[Random.Range(0, zombieSounds.Length)];
+            audioSource.Play();
+        }
+    }
+
+
     public void Hit(float damage)
     {
         health -= damage;

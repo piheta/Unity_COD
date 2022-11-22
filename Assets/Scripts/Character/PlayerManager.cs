@@ -13,6 +13,7 @@ public class PlayerManager : MonoBehaviour {
     private float shakeTime;
     private float shakeDuration;
     private Quaternion playerCameraOriginalRotation;
+    public AudioClip deathClip;
 
     // Start is called before the first frame update
     void Start() {
@@ -37,6 +38,7 @@ public class PlayerManager : MonoBehaviour {
         healthNum.text = health.ToString() + " Health ";
         if (health <= 0) {
             gameManager.EndGame();
+            AudioSource.PlayClipAtPoint(deathClip,transform.position);
         } else {
             shakeTime = 0;
             shakeDuration = .2f;
