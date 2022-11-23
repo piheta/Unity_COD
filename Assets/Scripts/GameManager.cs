@@ -54,6 +54,11 @@ public class GameManager : MonoBehaviour {
         }
 
         moneyNum.text = "Money: " + money.player_money.ToString();
+
+        if(money.easter_eggs == 10){
+            money.easter_eggs = 0;
+            Debug.Log("BOMBS");
+        }
         
     }
 

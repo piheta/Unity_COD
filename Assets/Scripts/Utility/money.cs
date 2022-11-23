@@ -17,6 +17,6 @@ public class money : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        Debug.Log("money: " + player_money + " eggs: " + easter_eggs);
+
     }
 }
