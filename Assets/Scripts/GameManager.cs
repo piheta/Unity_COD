@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour {
     public int round = 0;
 
     public GameObject[] spawnPoints;
-
-    public GameObject enemyPrefab;
+   
+    public GameObject[] enemyPrefab;
 
     public GameObject pauseMenu;
     public GameObject shopMenu;
@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour {
     public GameObject endScreen;
 
     public Animator blackScreenAnimator;
+
+    public int random;
+
+   
 
 
  
@@ -40,6 +44,7 @@ public class GameManager : MonoBehaviour {
         if (enemiesAlive == 0)
         {
                 round++;
+                
                 NextWave(round);
                 roundNum.text = "Round: " + round.ToString();
         }
@@ -59,25 +64,21 @@ public class GameManager : MonoBehaviour {
             money.easter_eggs = 0;
             Debug.Log("BOMBS");
         }
-
-        if (shopMenu.activeSelf){
-            Time.timeScale = 0;
-            Cursor.lockState = CursorLockMode.None;
-            AudioListener.volume = 0;
-        } else if(!shopMenu.activeSelf){ 
-            Time.timeScale = 1;
-            Cursor.lockState = CursorLockMode.Locked;
-            AudioListener.volume = 1;
-        }
     }
 
     public void NextWave(int round) {
-        for (int i = 0; i < round; i++) {
-            
-            GameObject spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
 
-            GameObject enemySpawned = Instantiate(enemyPrefab, spawnPoint.transform.position, Quaternion.identity);
+        
+        for (int i = 0; i < round; i++) {
+
+            random = Random.Range(0, enemyPrefab.Length);
+
+            GameObject spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+            
+           GameObject enemySpawned = Instantiate(enemyPrefab[random], spawnPoint.transform.position, Quaternion.identity);
             enemySpawned.GetComponent<EnemyManager>().gameManager = GetComponent<GameManager>();
+
+
             enemiesAlive++;
 
         }
