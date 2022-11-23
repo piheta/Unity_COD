@@ -14,6 +14,7 @@ public class PlayerManager : MonoBehaviour {
     private float shakeDuration;
     private Quaternion playerCameraOriginalRotation;
     public AudioClip deathClip;
+    public AudioClip hurtClip;
 
     // Start is called before the first frame update
     void Start() {
@@ -31,6 +32,14 @@ public class PlayerManager : MonoBehaviour {
         } else if(playerCamera.transform.localRotation != playerCameraOriginalRotation) {
             playerCamera.transform.localRotation = playerCameraOriginalRotation;
         }
+
+        if(money.easter_eggs >= 11){
+            money.easter_eggs = 0;
+            shakeDuration = 0.5f;
+            hurtPanel.alpha = .2f;
+            CameraShake();
+            
+        }
     }
 
     public void Hit(float damage) {
@@ -43,6 +52,7 @@ public class PlayerManager : MonoBehaviour {
             shakeTime = 0;
             shakeDuration = .2f;
             hurtPanel.alpha = .7f;
+            AudioSource.PlayClipAtPoint(hurtClip,transform.position);
         }
     }
 

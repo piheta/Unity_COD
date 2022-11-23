@@ -15,6 +15,12 @@ public class GameManager : MonoBehaviour {
 
     public GameObject pauseMenu;
     public GameObject shopMenu;
+    public GameObject bookMenu;
+
+
+    public GameObject boss1;
+    public GameObject boss2;
+    public GameObject boss3;
     
 
     public TextMeshProUGUI roundNum;
@@ -59,11 +65,7 @@ public class GameManager : MonoBehaviour {
         }
 
         moneyNum.text = "Money: " + money.player_money.ToString();
-
-        if(money.easter_eggs == 10){
-            money.easter_eggs = 0;
-            Debug.Log("BOMBS");
-        }
+        SpawnBoss();
     }
 
     public void NextWave(int round) {
@@ -81,6 +83,15 @@ public class GameManager : MonoBehaviour {
 
             enemiesAlive++;
 
+        }
+    }
+
+    public void SpawnBoss(){
+        if(egg.startBoss){
+            boss1.SetActive(true);
+            boss2.SetActive(true);
+            boss3.SetActive(true);
+            roundNum.text = "Round: " + "Boss";
         }
     }
 
@@ -109,7 +120,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void Pause() {
-        if(!shopMenu.activeSelf) {
+        if(!shopMenu.activeSelf && !bookMenu.activeSelf) {
         pauseMenu.SetActive(true);
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
