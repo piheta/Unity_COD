@@ -18,6 +18,7 @@ TagManager:
   - Wood
   - RoundNumber
   - Egg
+  - MoneyNumber
   layers:
   - Default
   - TransparentFX

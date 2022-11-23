@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour {
     
 
     public TextMeshProUGUI roundNum;
+    public TextMeshProUGUI moneyNum;
     public TextMeshProUGUI roundsSurvived;
     public GameObject endScreen;
 
@@ -51,6 +52,8 @@ public class GameManager : MonoBehaviour {
                 Pause();
             }
         }
+
+        moneyNum.text = "Money: " + money.player_money.ToString();
         
     }
 
