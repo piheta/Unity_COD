@@ -123,18 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &5 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1665123591155456823, guid: 1d342cf8b8aea7840ae58f016e405dc8,
-    type: 3}
-  m_PrefabInstance: {fileID: 618483496}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1687b5a45b3dda4695304724237b7df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1395890 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8109741214573319574, guid: 1d342cf8b8aea7840ae58f016e405dc8,
@@ -1280,7 +1268,7 @@ PrefabInstance:
     - target: {fileID: 1665123590562610830, guid: 1d342cf8b8aea7840ae58f016e405dc8,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1665123591155456819, guid: 1d342cf8b8aea7840ae58f016e405dc8,
         type: 3}
@@ -1566,7 +1554,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 5}
+      objectReference: {fileID: 0}
     - target: {fileID: 4532814274411078981, guid: 1d342cf8b8aea7840ae58f016e405dc8,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1792,7 +1780,8 @@ PrefabInstance:
       propertyPath: descriptionText
       value: 
       objectReference: {fileID: 1933431630}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1665123591155456823, guid: 1d342cf8b8aea7840ae58f016e405dc8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1d342cf8b8aea7840ae58f016e405dc8, type: 3}
 --- !u!114 &618483497 stripped
 MonoBehaviour:
