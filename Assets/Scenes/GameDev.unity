@@ -2380,6 +2380,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 4493914613880827488, guid: 6dc4cf4496348884d8ee27743ae38562,
     type: 3}
   pauseMenu: {fileID: 1885647893}
+  shopMenu: {fileID: 513391122}
   roundNum: {fileID: 453584896899654438}
   moneyNum: {fileID: 1653857846}
   roundsSurvived: {fileID: 1893549183}
@@ -3961,6 +3962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1429636982}
   obj1: {fileID: 290313368}
+  shopMenu: {fileID: 513391122}
   label: {fileID: 1578317783}
 --- !u!1001 &309486614
 PrefabInstance:
@@ -7370,6 +7372,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000011050751358, guid: ef77372ba45b400439d547071a884266,
     type: 3}
   m_PrefabInstance: {fileID: 509777538}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &513391122 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5197884286160333651, guid: 5b07026ad2ba9c649bc5d25c025d1455,
+    type: 3}
+  m_PrefabInstance: {fileID: 1196328303}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &523576112
 PrefabInstance:
@@ -19789,15 +19797,85 @@ PrefabInstance:
       propertyPath: myPurchaseButton.Array.data[9]
       value: 
       objectReference: {fileID: 1437927128}
-    - target: {fileID: 5197884286134917793, guid: 5b07026ad2ba9c649bc5d25c025d1455,
+    - target: {fileID: 129929659092046729, guid: 5b07026ad2ba9c649bc5d25c025d1455,
         type: 3}
-      propertyPath: m_SizeDelta.x
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129929659092046731, guid: 5b07026ad2ba9c649bc5d25c025d1455,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 665307746135226199, guid: 5b07026ad2ba9c649bc5d25c025d1455,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 770105418227576933, guid: 5b07026ad2ba9c649bc5d25c025d1455,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 770105418271800365, guid: 5b07026ad2ba9c649bc5d25c025d1455,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 770105418295393759, guid: 5b07026ad2ba9c649bc5d25c025d1455,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 770105418441085355, guid: 5b07026ad2ba9c649bc5d25c025d1455,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 770105418593963030, guid: 5b07026ad2ba9c649bc5d25c025d1455,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 770105419320877449, guid: 5b07026ad2ba9c649bc5d25c025d1455,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 770105419344880035, guid: 5b07026ad2ba9c649bc5d25c025d1455,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 770105419398273059, guid: 5b07026ad2ba9c649bc5d25c025d1455,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5197884284400438215, guid: 5b07026ad2ba9c649bc5d25c025d1455,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5197884285450503818, guid: 5b07026ad2ba9c649bc5d25c025d1455,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5197884286056929232, guid: 5b07026ad2ba9c649bc5d25c025d1455,
+        type: 3}
+      propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5197884286134917793, guid: 5b07026ad2ba9c649bc5d25c025d1455,
         type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5197884286134917793, guid: 5b07026ad2ba9c649bc5d25c025d1455,
+        type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5197884286160333648, guid: 5b07026ad2ba9c649bc5d25c025d1455,
         type: 3}
@@ -19919,10 +19997,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5197884286160333649, guid: 5b07026ad2ba9c649bc5d25c025d1455,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5197884286160333651, guid: 5b07026ad2ba9c649bc5d25c025d1455,
         type: 3}
       propertyPath: m_Name
       value: ShopBase
+      objectReference: {fileID: 0}
+    - target: {fileID: 5197884286160333651, guid: 5b07026ad2ba9c649bc5d25c025d1455,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b07026ad2ba9c649bc5d25c025d1455, type: 3}
@@ -26394,12 +26482,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1578317785}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &1578317785
 MeshRenderer:
   m_ObjectHideFlags: 0

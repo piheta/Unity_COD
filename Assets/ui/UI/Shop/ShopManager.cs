@@ -16,7 +16,7 @@ public class ShopManager : MonoBehaviour
 
     void Start()
     {
-        coins = 500;
+        
         for (int i = 0; i < shopItemSO.Length; i++)
         {
             shopPanelGO[i].SetActive(true);
@@ -27,10 +27,13 @@ public class ShopManager : MonoBehaviour
         
     }
 
+    void Update(){
+        
+    }
+
     public void AddCoins()
     {
-        coins = coins + 100;
-        coinsText.text = "Coins:" + coins.ToString();
+        money.player_money = money.player_money + 100;
         CheckPurchasable();
     }
 
@@ -48,7 +51,7 @@ public class ShopManager : MonoBehaviour
     {
         for (int i = 0; i < shopItemSO.Length; i++)
         {
-            if(coins >= shopItemSO[i].baseCost)
+            if(money.player_money >= shopItemSO[i].baseCost)
                 myPurchaseButton[i].interactable = true;
             else
                 myPurchaseButton[i].interactable = false;
@@ -57,10 +60,9 @@ public class ShopManager : MonoBehaviour
 
     public void Purchase(int buttonNumber)
     {
-        if(coins >= shopItemSO[buttonNumber].baseCost)
+        if(money.player_money >= shopItemSO[buttonNumber].baseCost)
         {
-            coins = coins - shopItemSO[buttonNumber].baseCost;
-            coinsText.text = "Coins:" + coins.ToString();
+            money.player_money = money.player_money - shopItemSO[buttonNumber].baseCost;
             CheckPurchasable();
             print(shopItemSO[buttonNumber].title + " is bought");
         }

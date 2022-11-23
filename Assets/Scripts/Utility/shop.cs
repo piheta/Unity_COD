@@ -7,6 +7,7 @@ public class shop : MonoBehaviour
     public GameObject player;
     float Distance1;
     public GameObject obj1;
+    public GameObject shopMenu;
     public GameObject label;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,14 @@ public class shop : MonoBehaviour
             
             if (Input.GetKeyDown(KeyCode.E)) { 
                 //open shopwindow
+                shopMenu.SetActive(true);
+                Time.timeScale = 0;
+                
+                //Cursor.lockState = CursorLockMode.None;
+                
+            }
+            if(shopMenu.activeSelf && Input.GetKeyDown(KeyCode.Escape)){
+                shopMenu.SetActive(false);
             }
 
         } 

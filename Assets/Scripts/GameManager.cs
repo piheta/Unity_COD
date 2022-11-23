@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour {
     public GameObject enemyPrefab;
 
     public GameObject pauseMenu;
-
+    public GameObject shopMenu;
     
 
     public TextMeshProUGUI roundNum;
@@ -59,7 +59,16 @@ public class GameManager : MonoBehaviour {
             money.easter_eggs = 0;
             Debug.Log("BOMBS");
         }
-        
+
+        if (shopMenu.activeSelf){
+            Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
+            AudioListener.volume = 0;
+        } else if(!shopMenu.activeSelf){ 
+            Time.timeScale = 1;
+            Cursor.lockState = CursorLockMode.Locked;
+            AudioListener.volume = 1;
+        }
     }
 
     public void NextWave(int round) {
@@ -99,10 +108,12 @@ public class GameManager : MonoBehaviour {
     }
 
     public void Pause() {
+        if(!shopMenu.activeSelf) {
         pauseMenu.SetActive(true);
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
         AudioListener.volume = 0;
+        }
     }
 
     public void UnPause() {
