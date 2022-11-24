@@ -15,7 +15,7 @@ public void hitEgg(){
         money.easter_eggs += 1;
 
         // play egg collect sound on all the eggs except the last one, the last one plays boss music.
-        if(money.easter_eggs < 1){
+        if(money.easter_eggs < 11){
             pickup.Play();
         } else {
             scream.Play();

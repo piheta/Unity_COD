@@ -36,9 +36,6 @@ public class GameManager : MonoBehaviour {
 
    
 
-
- 
-
     // Start is called before the first frame update
     void Start() {
     }
@@ -67,9 +64,11 @@ public class GameManager : MonoBehaviour {
         }
 
         moneyNum.text = "Money: " + money.player_money.ToString();
-        
 
-        SpawnBoss();
+        if (egg.startBoss) {
+            SpawnBoss();
+        } 
+       
 
     }
 
@@ -92,21 +91,19 @@ public class GameManager : MonoBehaviour {
     }
 
     public void SpawnBoss(){
-        if(egg.startBoss){
-            for (int i = 0; i < numberOfBosses; i++)
-            {
-                GameObject bossSpawnPoint = bossSpawnPoints[Random.Range(0, bossSpawnPoints.Length)];
+    
+        for (int i = 0; i < numberOfBosses; i++)
+        {
+            GameObject bossSpawnPoint = bossSpawnPoints[Random.Range(0, bossSpawnPoints.Length)];
 
-                GameObject bossSpawned = Instantiate(boss, bossSpawnPoint.transform.position, Quaternion.identity);
-                bossSpawned.GetComponent<EnemyManager>().gameManager = GetComponent<GameManager>();
+            GameObject bossSpawned = Instantiate(boss, bossSpawnPoint.transform.position, Quaternion.identity);
+            bossSpawned.GetComponent<BossManager>().gameManager = GetComponent<GameManager>();
 
-                i++;
-            }
-
-            roundNum.text = "Round: " + "Boss";
-            egg.startBoss = false;
-
+            i++;
         }
+        roundNum.text = "Round: " + "Boss";
+        egg.startBoss = false;
+        enemiesAlive = enemiesAlive + 2;
     }
 
     public void EndGame() {

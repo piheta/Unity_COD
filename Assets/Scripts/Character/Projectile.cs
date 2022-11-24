@@ -60,6 +60,18 @@ public class Projectile : MonoBehaviour {
 			//Destroy bullet object
 			Destroy(gameObject);
 		}
+
+		if (collision.transform.tag == "Boss")
+		{
+			collision.collider.GetComponent<BossManager>().Hit(damage);
+
+			//Instantiate random impact prefab from array
+			Instantiate(metalImpactPrefabs[Random.Range
+				(0, metalImpactPrefabs.Length)], transform.position,
+				Quaternion.LookRotation(collision.contacts[0].normal));
+			//Destroy bullet object
+			Destroy(gameObject);
+		}
 	}
 
 	private IEnumerator DestroyTimer()

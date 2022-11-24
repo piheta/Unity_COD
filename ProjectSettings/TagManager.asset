@@ -19,6 +19,7 @@ TagManager:
   - RoundNumber
   - Egg
   - MoneyNumber
+  - Boss
   layers:
   - Default
   - TransparentFX

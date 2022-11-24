@@ -1721,13 +1721,13 @@ GameObject:
   m_Component:
   - component: {fileID: 578376449398627443}
   - component: {fileID: 7389507112651452681}
-  - component: {fileID: 2433144827134922424}
+  - component: {fileID: 4548203388115787113}
   - component: {fileID: 516688830}
   - component: {fileID: 516688826}
   - component: {fileID: 1299479293}
   m_Layer: 0
   m_Name: boss
-  m_TagString: Metal
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1782,7 +1782,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2433144827134922424
+--- !u!114 &4548203388115787113
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1791,26 +1791,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 4493914613880827488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b731aa458e8795b42b748bb5f719c5c3, type: 3}
+  m_Script: {fileID: 11500000, guid: ec18796321ecc7d4f8a31942c6c970fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAnimator: {fileID: 7389507112651452681}
   damage: 50
-  health: 50
+  health: 5000
   gameManager: {fileID: 0}
   target: {fileID: 7646167350421451695, guid: a407aa65caf2efe08bbc33d10159b65b, type: 3}
   aiState: 0
-  distanceTreshold: 10000
+  distanceTreshold: 1000
   attackThreshold: 1
   audioSource: {fileID: 0}
   zombieSounds:
   - {fileID: 8300000, guid: 4da1534b3f4bd8f4c9a91f47bcb9ea35, type: 3}
+  - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
+  - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
+  - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
+  - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
+  - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
+  - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
   - {fileID: 8300000, guid: 8d980dadcc9699a40851c3425244e216, type: 3}
-  - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
-  - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
-  - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
-  - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
-  - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
   - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
   - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
   - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
