@@ -7,8 +7,6 @@ using TMPro;
 
 public class ShopManager : MonoBehaviour
 {
-    public int coins;
-    public TMP_Text coinsText;
     public ShopItemScriptable[] shopItemSO;
     public GameObject[] shopPanelGO;
     public ShopTemplate[] shopPanels;
@@ -22,7 +20,6 @@ public class ShopManager : MonoBehaviour
         {
             shopPanelGO[i].SetActive(true);
         }
-        coinsText.text = "Coins:" + coins.ToString();
         LoadPanels();
         CheckPurchasable();
 
@@ -75,7 +72,6 @@ public class ShopManager : MonoBehaviour
         if (money.player_money >= shopItemSO[buttonNumber].baseCost)
         {
             money.player_money = money.player_money - shopItemSO[buttonNumber].baseCost;
-            coinsText.text = "Coins:" + coins.ToString();
             CheckPurchasable();
             shopPanels[buttonNumber].BoughtEffect();
         }

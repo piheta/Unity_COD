@@ -1796,7 +1796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyAnimator: {fileID: 7389507112651452681}
   damage: 50
-  health: 5000
+  health: 2500
   gameManager: {fileID: 0}
   target: {fileID: 7646167350421451695, guid: a407aa65caf2efe08bbc33d10159b65b, type: 3}
   aiState: 0
