@@ -10,9 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6626ae8cc4ce307418862c988cd5635d, type: 3}
-  m_Name: Weapon
+  m_Name: MagSize
   m_EditorClassIdentifier: 
-  title: Ak 47
-  description: A better weapon
-  baseCost: 100
+  title: MagSize
+  description: Less reloading
+  baseCost: 300
   discount: 0
+  AmmunitionAmount: 0
+  MagSizeAmount: 10
+  FireRateAmount: 0
+  HealAmount: 0

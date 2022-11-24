@@ -10,9 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6626ae8cc4ce307418862c988cd5635d, type: 3}
-  m_Name: SideArm
+  m_Name: HealthMinor
   m_EditorClassIdentifier: 
-  title: Dessert Eagle
-  description: Size doesn't always matter
+  title: HealthMinor
+  description: Just a little more
   baseCost: 50
   discount: 0
+  AmmunitionAmount: 0
+  MagSizeAmount: 0
+  FireRateAmount: 0
+  HealAmount: 25

@@ -10,9 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6626ae8cc4ce307418862c988cd5635d, type: 3}
-  m_Name: Grenade
+  m_Name: HealthMajor
   m_EditorClassIdentifier: 
-  title: Grenade
-  description: Goes Boom
-  baseCost: 40
+  title: HealthMajor
+  description: Gotta heal up
+  baseCost: 200
   discount: 0
+  AmmunitionAmount: 0
+  MagSizeAmount: 0
+  FireRateAmount: 0
+  HealAmount: 75

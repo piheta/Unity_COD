@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: Ammunition
   m_EditorClassIdentifier: 
   title: Ammunition
-  description: you don't wanna run out of bullets
-  baseCost: 25
+  description: More Ammo more fun
+  baseCost: 200
   discount: 0
+  AmmunitionAmount: 50
+  MagSizeAmount: 0
+  FireRateAmount: 0
+  HealAmount: 0

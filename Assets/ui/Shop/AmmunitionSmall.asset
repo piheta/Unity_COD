@@ -10,9 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6626ae8cc4ce307418862c988cd5635d, type: 3}
-  m_Name: Health Potion
+  m_Name: AmmunitionSmall
   m_EditorClassIdentifier: 
-  title: Health Potion
-  description: Drink for good vibes
-  baseCost: 50
+  title: AmmunitionSmall
+  description: Just a little more
+  baseCost: 100
   discount: 0
+  AmmunitionAmount: 20
+  MagSizeAmount: 0
+  FireRateAmount: 0
+  HealAmount: 0

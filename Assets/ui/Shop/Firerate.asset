@@ -10,9 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6626ae8cc4ce307418862c988cd5635d, type: 3}
-  m_Name: Armour
+  m_Name: Firerate
   m_EditorClassIdentifier: 
-  title: Armour
-  description: Gotta stay safe
-  baseCost: 75
+  title: FireRate
+  description: Gotta go even faster
+  baseCost: 300
   discount: 0
+  AmmunitionAmount: 0
+  MagSizeAmount: 0
+  FireRateAmount: 100
+  HealAmount: 0
