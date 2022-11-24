@@ -10,19 +10,19 @@ namespace InfimaGames.LowPolyShooterPack.Interface
     public class TextAmmunitionTotal : ElementText
     {
         #region METHODS
-        
+
         /// <summary>
         /// Tick.
         /// </summary>
         protected override void Tick()
         {
             //Total Ammunition.
-            float ammunitionTotal = equippedWeapon.GetAmmunitionTotal();
-            
+            float ammunitionTotal = equippedWeapon.getAmmunitionTotal();
+
             //Update Text.
             textMesh.text = ammunitionTotal.ToString(CultureInfo.InvariantCulture);
         }
-        
+
         #endregion
     }
 }
