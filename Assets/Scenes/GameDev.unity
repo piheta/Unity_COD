@@ -3317,7 +3317,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &249307110
 PrefabInstance:
@@ -17465,7 +17465,7 @@ PrefabInstance:
     - target: {fileID: 5477609048248655061, guid: a407aa65caf2efe08bbc33d10159b65b,
         type: 3}
       propertyPath: ammunitionMagMax
-      value: 20
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7644614380589113357, guid: a407aa65caf2efe08bbc33d10159b65b,
         type: 3}
@@ -37670,7 +37670,7 @@ PrefabInstance:
     - target: {fileID: 7377202706321494963, guid: 7b4a64982460f510a9a949f4ea9bfbfb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7377202706321494963, guid: 7b4a64982460f510a9a949f4ea9bfbfb,
         type: 3}

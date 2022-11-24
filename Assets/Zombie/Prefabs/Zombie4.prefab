@@ -1805,12 +1805,12 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   zombieSounds:
   - {fileID: 8300000, guid: 4da1534b3f4bd8f4c9a91f47bcb9ea35, type: 3}
+  - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
+  - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
+  - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
+  - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
+  - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
   - {fileID: 8300000, guid: 8d980dadcc9699a40851c3425244e216, type: 3}
-  - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
-  - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
-  - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
-  - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
-  - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
   - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
   - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
   - {fileID: 8300000, guid: 5b8e8ae0da873dc449d2b6036ddbb684, type: 3}
