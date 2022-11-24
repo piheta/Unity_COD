@@ -12,6 +12,8 @@ public class EnemyManager : MonoBehaviour
     public float damage = 20f;
     public float health = 100;
     public GameManager gameManager;
+    public GameObject loot1;
+    public GameObject loot2;
 
 
     NavMeshAgent nm;
@@ -20,6 +22,8 @@ public class EnemyManager : MonoBehaviour
     public AIState aiState = AIState.idle;
     public float distanceTreshold = 10f;
     public float attackThreshold = 0.5f;
+    public System.Random rnd = new System.Random();
+    public int whichLoot;
 
 
     public AudioSource audioSource;
@@ -41,6 +45,8 @@ public class EnemyManager : MonoBehaviour
             audioSource.clip = zombieSounds[Random.Range(0, zombieSounds.Length)];
             audioSource.Play();
         }
+
+
     }
 
 
@@ -50,14 +56,37 @@ public class EnemyManager : MonoBehaviour
         if (health <= 0)
         {
             money.player_money += 50;
+            GenerateObject(gameObject);
             enemyAnimator.SetTrigger("dead");
             gameManager.enemiesAlive--;
             Destroy(gameObject, 5f);
             Destroy(GetComponent<NavMeshAgent>());
             Destroy(GetComponent<EnemyManager>());
             Destroy(GetComponent<CapsuleCollider>());
+            
+
         }
     }
+
+    void GenerateObject(GameObject zombie)
+    {
+        System.Random rnd = new System.Random();
+        Vector3 zomPos = zombie.transform.position;
+
+        //create a number between 1 and 20, get loot if number is 1, 5%
+        int ifLoot = rnd.Next(1,21);
+        if(ifLoot == 1){
+
+            // creates a number between 1 and 2 and pick which loot to drop
+            int whichLoot  = rnd.Next(1, 3);
+            if(whichLoot == 1){
+                Instantiate(loot1, zomPos, zombie.transform.rotation);
+            } else {
+                Instantiate(loot2, zomPos, zombie.transform.rotation);
+            }
+        }
+    }
+
 
     IEnumerator Think()
     {

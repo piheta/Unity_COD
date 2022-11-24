@@ -3,7 +3,12 @@ guid: b731aa458e8795b42b748bb5f719c5c3
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - enemyAnimator: {instanceID: 0}
+  - gameManager: {instanceID: 0}
+  - loot1: {instanceID: 0}
+  - target: {instanceID: 0}
+  - audioSource: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -1798,6 +1798,7 @@ MonoBehaviour:
   damage: 20
   health: 100
   gameManager: {fileID: 0}
+  loot1: {fileID: 5267202701200564336, guid: 3d5cdba3cea1cea68b213e4652f00817, type: 3}
   target: {fileID: 7646167350421451695, guid: a407aa65caf2efe08bbc33d10159b65b, type: 3}
   aiState: 0
   distanceTreshold: 10000
