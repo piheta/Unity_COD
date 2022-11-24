@@ -13,7 +13,23 @@ public class AmmoBuff : PickupWithScriptableObject
     public override void Apply(GameObject target)
     {
         Weapon[] weapons = target.GetComponentsInChildren<Weapon>(true);
-        weapons[0].ammunitionTotal = MainWeaponamount;
-        weapons[1].ammunitionTotal = SideWeaponamount;
+        if (weapons[0].ammunitionTotal <= MainWeaponamount)
+        {
+            weapons[0].ammunitionTotal = MainWeaponamount;
+        }
+        else
+        {
+            weapons[0].ammunitionTotal += (MainWeaponamount/2);
+        }
+
+        if (weapons[1].ammunitionTotal <= SideWeaponamount)
+        {
+            weapons[1].ammunitionTotal = SideWeaponamount;
+        }
+        else
+        {
+            weapons[1].ammunitionTotal += (SideWeaponamount / 2);
+        }
+        
     }
 }

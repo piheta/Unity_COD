@@ -99,7 +99,7 @@ namespace InfimaGames.LowPolyShooterPack
         /// <summary>
         /// Amount of ammunition left.
         /// </summary>
-        private int ammunitionCurrent;
+        public int ammunitionCurrent;
 
         public int ammunitionMagMax;
 
