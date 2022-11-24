@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98b9fae741a9dcf43a4325e99656ba04, type: 3}
   m_Name: AmmoBuff
   m_EditorClassIdentifier: 
-  amount: 50
+  MainWeaponamount: 200
+  SideWeaponamount: 100
