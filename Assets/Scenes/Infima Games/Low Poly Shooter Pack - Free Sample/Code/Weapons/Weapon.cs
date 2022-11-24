@@ -250,7 +250,7 @@ namespace InfimaGames.LowPolyShooterPack
         public override void FillAmmunition(int amount)
         {
 
-            if (ammunitionMagMax < ammunitionTotal)
+            if (ammunitionMagMax <= ammunitionTotal)
             {
                 ammunitionTotal -= (ammunitionMagMax - ammunitionCurrent);
                 ammunitionCurrent = ammunitionMagMax;

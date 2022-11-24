@@ -11,6 +11,7 @@ public class AmmoBuff : PickupWithScriptableObject
 
     public override void Apply(GameObject target)
     {
-        target.GetComponentInChildren<Weapon>().ammunitionTotal += amount;
+        target.GetComponentsInChildren<Weapon>()[0].ammunitionTotal += amount;
+        //target.GetComponentsInChildren<Weapon>()[1].ammunitionTotal += amount;        
     }
 }
