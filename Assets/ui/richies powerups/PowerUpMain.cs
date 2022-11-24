@@ -10,9 +10,9 @@ public class PowerUpMain : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         //sjekk om den de colliderer med er player
-        soundEffect.Play();
         pickUpEffect.Apply(collision.gameObject);
         Destroy(gameObject);
+        soundEffect.Play();
     }
 }
 
