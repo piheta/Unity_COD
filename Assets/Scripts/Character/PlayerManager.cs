@@ -40,6 +40,7 @@ public class PlayerManager : MonoBehaviour {
             CameraShake();
             
         }
+        healthNum.text = health.ToString() + " Health ";
     }
 
     public void Hit(float damage) {
