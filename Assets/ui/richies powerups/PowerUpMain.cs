@@ -5,11 +5,12 @@ using UnityEngine;
 public class PowerUpMain : MonoBehaviour
 {
     public PickupWithScriptableObject pickUpEffect;
+    public AudioSource soundEffect;
 
     private void OnTriggerEnter(Collider collision)
     {
         //sjekk om den de colliderer med er player
-
+        soundEffect.Play();
         pickUpEffect.Apply(collision.gameObject);
         Destroy(gameObject);
     }

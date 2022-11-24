@@ -30,7 +30,7 @@ public class ShopManager : MonoBehaviour
 
     void Update()
     {
-
+        CheckPurchasable();
     }
 
     public void AddCoins()
