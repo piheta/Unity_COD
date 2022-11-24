@@ -9,18 +9,20 @@ public class GameManager : MonoBehaviour {
 
     public int round = 0;
 
+    public int numberOfBosses = 3;
+
     public GameObject[] spawnPoints;
-   
+
     public GameObject[] enemyPrefab;
+
+    public GameObject[] bossSpawnPoints;
 
     public GameObject pauseMenu;
     public GameObject shopMenu;
     public GameObject bookMenu;
 
 
-    public GameObject boss1;
-    public GameObject boss2;
-    public GameObject boss3;
+    public GameObject boss;
     
 
     public TextMeshProUGUI roundNum;
@@ -65,7 +67,10 @@ public class GameManager : MonoBehaviour {
         }
 
         moneyNum.text = "Money: " + money.player_money.ToString();
+        
+
         SpawnBoss();
+
     }
 
     public void NextWave(int round) {
@@ -77,7 +82,7 @@ public class GameManager : MonoBehaviour {
 
             GameObject spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
             
-           GameObject enemySpawned = Instantiate(enemyPrefab[random], spawnPoint.transform.position, Quaternion.identity);
+            GameObject enemySpawned = Instantiate(enemyPrefab[random], spawnPoint.transform.position, Quaternion.identity);
             enemySpawned.GetComponent<EnemyManager>().gameManager = GetComponent<GameManager>();
 
 
@@ -88,10 +93,19 @@ public class GameManager : MonoBehaviour {
 
     public void SpawnBoss(){
         if(egg.startBoss){
-            boss1.SetActive(true);
-            boss2.SetActive(true);
-            boss3.SetActive(true);
+            for (int i = 0; i < numberOfBosses; i++)
+            {
+                GameObject bossSpawnPoint = bossSpawnPoints[Random.Range(0, bossSpawnPoints.Length)];
+
+                GameObject bossSpawned = Instantiate(boss, bossSpawnPoint.transform.position, Quaternion.identity);
+                bossSpawned.GetComponent<EnemyManager>().gameManager = GetComponent<GameManager>();
+
+                i++;
+            }
+
             roundNum.text = "Round: " + "Boss";
+            egg.startBoss = false;
+
         }
     }
 
