@@ -49,7 +49,7 @@ public class EnemyManager : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            money.player_money += 100;
+            money.player_money += 50;
             enemyAnimator.SetTrigger("dead");
             gameManager.enemiesAlive--;
             Destroy(gameObject, 5f);
