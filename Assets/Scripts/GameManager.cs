@@ -56,12 +56,15 @@ public class GameManager : MonoBehaviour {
  
 
 
-        if (!endScreen.activeSelf) {
-            if (Input.GetKeyDown(KeyCode.Escape))
+        if (!endScreen.activeSelf && !pauseMenu.activeSelf) {
+            if (Input.GetKeyDown(KeyCode.P))
             {
                 Pause();
             }
         }
+
+
+        
 
         moneyNum.text = "Money: " + money.player_money.ToString();
 
@@ -108,6 +111,7 @@ public class GameManager : MonoBehaviour {
 
     public void EndGame() {
         Time.timeScale = 0;
+        money.player_money = 1000;
         Cursor.lockState = CursorLockMode.None;
         endScreen.SetActive(true);
         roundsSurvived.text = round.ToString();
@@ -135,7 +139,9 @@ public class GameManager : MonoBehaviour {
         pauseMenu.SetActive(true);
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         AudioListener.volume = 0;
+
         }
     }
 
@@ -143,6 +149,7 @@ public class GameManager : MonoBehaviour {
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = true;
         AudioListener.volume = 1;
     }
 }
