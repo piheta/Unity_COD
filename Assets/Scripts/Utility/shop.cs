@@ -29,14 +29,12 @@ public class shop : MonoBehaviour
                 
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
-                AudioListener.volume = 0;
                 
             }
             if(shopMenu.activeSelf && Input.GetKeyDown(KeyCode.X)){
                 Cursor.lockState = CursorLockMode.Locked;
                 Time.timeScale = 1;
                 shopMenu.SetActive(false);
-                AudioListener.volume = 1;
             }
 
         } 
